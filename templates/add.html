@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Admin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    {% include 'bootstrap.html' %}
+</head>
+<body>
+    <div class="container">
+        {% include "header.html" %}
+        <h3>Add Blog</h3><br>
+        <div>
+            <form action="/new" method="post">
+                <input type="text" name="title" placeholder="Title" class="form-control" required><br>
+                <textarea name="content" placeholder="Content" class="form-control" required></textarea><br>
+                <input type="submit" value="Publish" class="btn btn-outline-primary">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

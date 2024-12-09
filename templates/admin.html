@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+    {% include 'bootstrap.html' %}
+</head>
+<body>
+    <div class="container">
+
+        {% include 'header.html' %}
+        
+        <div>
+            <b class="overall-font" style="color: black; font-size: medium;">Operations:&nbsp;&nbsp;&nbsp;</b> 
+            <a href="/new" type="button" class="btn btn-outline-primary">+ Add</a></div><br>
+        
+            {% for blog in BLOGS %}
+    <div style="display: flex; justify-content: space-between;">
+        <span><a href="/blog/{{blog["id"]}}">{{blog["title"]}}</a></span>
+        <span><a href="/edit/{{blog["id"]}}">Edit</a> <a href="/delete/{{blog["id"]}}">Delete</a></span>
+    </div>
+       {% endfor %}
+    </div>
+</body>
+</html>

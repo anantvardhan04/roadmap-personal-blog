@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    {% include 'bootstrap.html' %}
+</head>
+<body>
+    <div class="container">
+    {% include "header.html" %}
+        {% for blog in BLOGS %}
+    <div style="display: flex; justify-content: space-between;">
+        <span><a href="/blog/{{blog["id"]}}">{{blog["title"]}}</a></span>
+        <span>{{blog["published_date"]}}</span>
+    </div>
+       {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    {% include 'bootstrap.html' %}
+</head>
+<body>
+    <div class="container">
+    {% include "header.html" %}
+
+        <h2 class="mt-3">{{ BLOGS["title"] }}</h2>
+        <hr>
+        <p>{{ BLOGS["content"]}}</p>
+        <p><b>Published on:</b> {{ BLOGS["published_date"]}}</p>
+    </div>
+</body>
+</html>

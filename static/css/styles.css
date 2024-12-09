@@ -1,0 +1,11 @@
+.overall-font {
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    color: rgb(80, 0, 193)
+}
+
+.container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+}
